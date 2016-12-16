@@ -1,8 +1,23 @@
 <html>
 	<head>
 		<title>Sinatra Framework</title>
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="/css/application.min.css" rel="stylesheet">
 	</head>
+
+	<% if logged_in? %>
+	<p>Logged in as <%= @current_user.full_name %></p>
+			<span><a href='/users/:id'>Profile</a></span>
+			<span><a href=/logout>Logout</a></span>
+	<% end %>
+
 	<body>
 		<%= yield %>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/application.js"></script>
 	</body>
+
+	
 </html>

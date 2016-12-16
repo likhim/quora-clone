@@ -1,2 +1,21 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<h1>QuoraClone</h1>
+<p>Maybe the best answer to any question</p>
+
+<h3>NEW HERE? Sign up for an account!</h3>
+<form id="signup", action="/signup" method="POST">
+	<input type=text name="user[full_name]" placeholder="Name"><br>
+	<input type=text name="user[email]" placeholder="Email"><br>
+	<input type=password name="user[password]" placeholder="Password"><br>
+	<input type=submit value="Sign up">
+</form>
+
+<h3>Welcome back. Login</h3>
+<form id="login", action="/login", method="POST">
+	<input type=text name="user[email]" placeholder="Email"><br>
+	<input type=password name="user[password]" placeholder="Password"></br>
+	<input type=submit value="Login">
+</form>
+
+
+<!-- <button name="login">Login</button>
+<button name="signup">Sign Up</button> -->
